@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wqianlai_blog</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2/css/base.css' %}">
+    <script src="{% static 'bootstrap-5.0.2/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<header class="p-3 bg-light text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/static" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use  xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-secondary">Features</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-primary me-2">注册</button>
+          <button type="button" class="btn btn-primary">登录</button>
+        </div>
+      </div>
+    </div>
+  </header>
+<mian>
+    <div class="container bg-white m-auto mt-3 rounded-2 row text-center p-3"  >
+        <div style="width: 300px " class="m-auto">
+            <h1 class="p-3">登录</h1>
+        <form action="" method="post">
+            <div class="mb-3">
+                <label class="text-start d-block">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="email">
+            </div>
+            <div class="mb-3">
+                <label class="text-start d-block">密码</label>
+                <input type="password" name="password" class="form-control" placeholder="密码">
+            </div>
+            <div class="mb-3">
+                   <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label text-start d-block" for="flexCheckDefault">
+                默认记住
+              </label>
+            </div> 
+            </div>  
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary w-100">登录</button>
+            </div>
+
+            
+        </form>
+        </div>
+
+   
+    </div>
+</mian>
+</body>
+</html>

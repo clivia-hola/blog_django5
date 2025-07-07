@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}{{ blog.title }}{% endblock %}
+{% block main %}
+    <h1 class="p-3"> 博客详情</h1>
+        <hr>
+        <div>
+            <img src="{% static '/img/dog.png' %}" width="30" height="30" class="rounded-circle" alt="" >
+            <span class="ms-1">{{ blog.author.username }}</span>
+            <span class="ms-1">在</span>
+            <span class="create-time ms-2">{{ blog.pub_time|date:"Y年M月D日h时i分"}}</span>发布
+        </div>
+        <hr class="mt-2">
+        <div class="py-1">{{ blog.content|safe }}</div>
+        <span>hola</span>
+        <hr class="mt-2">
+        <h3>comments({{ blog.comments.all|length }}):</h3>
+        <form action="{% url 'blog:pub_comment'%}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="blog_id" value="{{ blog.id }}">        
+         <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="内容" name="content">
+          <button class="btn btn-outline-secondary " type="submit" id="button-addon2">提交</button>
+        </div>
+    </form>
+        <hr>
+        <div class="py-2 d-flex justify-content-between">
+            <div><img src="{% static 'img/dog.png' %}" width="40" height="40" alt="">
+            <span>hola</span>
+            </div>
+            <span>{{ blog.comments.pub_time|date:"Y年M月D日h时i分" }}</span>
+        </div>
+            <ul class="list-group">
+            {% for comment in blog.comments.all %}
+          <li class="list-group-item">{{ comment.content }}</li>
+            {% endfor %}
+            </ul>
+
+{% endblock %}

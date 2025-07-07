@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wqianlai_blog</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2/css/base.css' %}">
+    <script src="{% static 'bootstrap-5.0.2/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<header class="p-3 bg-light text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/static" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use  xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-secondary">Features</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-primary me-2">注册</button>
+          <button type="button" class="btn btn-primary">登录</button>
+        </div>
+      </div>
+    </div>
+  </header>
+<mian>
+    <div class="container bg-white m-auto mt-3 rounded-2 row p-3"  >
+        <h1 class="p-3"> 博客详情</h1>
+        <hr>
+        <div>
+            <img src="{% static '/img/dog.png' %}" width="30" height="30" class="rounded-circle" alt="" >
+            <span class="ms-1">hola</span>
+            <span class="ms-1">在</span>
+            <span class="create-time ms-2">2025-05-22</span>发布
+        </div>
+        <hr class="mt-2">
+        <div class="py-1">这是一个demo啦！</div>
+        <span>hola</span>
+        <hr class="mt-2">
+        <h3>comments(0):</h3>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="内容" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary " type="button" id="button-addon2">提交</button>
+        </div>
+        <hr>
+        <div class="py-2 d-flex justify-content-between">
+            <div><img src="{% static 'img/dog.png' %}" width="40" height="40" alt="">
+            <span>hola</span>
+            </div>
+            <span>data:25-05-22</span>
+        </div>
+
+        
+        
+        
+    </div>
+</mian>
+</body>
+</html>

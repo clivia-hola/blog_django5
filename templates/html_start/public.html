@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wqianlai_blog</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2/css/base.css' %}">
+    <script src="{% static 'bootstrap-5.0.2/bootstrap.min.js' %}"></script>
+    <link
+  href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css"
+  rel="stylesheet"
+/>
+<style>
+  #editor—wrapper {
+    border: 1px solid #ccc;
+    z-index: 100; /* 按需定义 */
+  }
+  #toolbar-container {
+    border-bottom: 1px solid #ccc;
+  }
+  #editor-container {
+    height: 500px;
+  }
+</style>
+    <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+    <script src="{% static 'js/public_base.js' %}"></script>
+
+</head>
+<body>
+<header class="p-3 bg-light text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/static" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use  xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-secondary">Features</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-primary me-2">注册</button>
+          <button type="button" class="btn btn-primary">登录</button>
+        </div>
+      </div>
+    </div>
+  </header>
+<mian>
+    <div class="container bg-white m-auto mt-3 rounded-2 row p-3"  >
+        <h1 class="p-3"> 博客发布</h1>
+        <div class="p-3">
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label class="form-label">标题</label>
+                    <input type="text" class="form-control" name="title" placeholder="请输入标题">
+                </div>
+               <div class="mb-3">
+                    <label class="form-label">分类</label>
+                   <select name="category" class="form-select">
+                       <option value="1">python</option>
+                       <option value="2">java</option>
+                   </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">内容</label>
+                            <div id="editor—wrapper">
+          <div id="toolbar-container"><!-- 工具栏 --></div>
+          <div id="editor-container"><!-- 编辑器 --></div>
+        </div>
+                </div>
+                <div class="mb-3 text-end">
+                    <button type="submit" class="btn btn-primary ">发布</button>
+                </div>
+            </form>
+        </div>
+        
+        
+        
+
+        
+    </div>
+</mian>
+</body>
+</html>
